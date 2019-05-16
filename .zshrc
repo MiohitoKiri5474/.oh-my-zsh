@@ -74,10 +74,10 @@ POWERLEVEL9K_BATTERY_STAGES=(
 
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S %m.%d.%y}"
 
+#ZSH_THEME="robbyrussell"
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
-# command line 左邊想顯示的內容
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir dir_writable vcs) # <= left prompt 設了 "dir"
-# command line 右邊想顯示的內容
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)  # <= right prompt 設了 "time"
 
 source $ZSH/oh-my-zsh.sh
@@ -110,3 +110,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+mvim() {   (unset GEM_PATH GEM_HOME; command mvim "$@") } 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
